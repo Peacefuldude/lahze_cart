@@ -26,6 +26,7 @@ nav {
     -webkit-user-select: none;
     touch-action: manipulation;
     transition: all .2s ease-in;
+    color: var(--logo_red);
 }
 
 .btn_nav:hover {
@@ -36,7 +37,7 @@ nav {
 .btn_account {
     font-size: 16px;
     color: var(--text_black_darker);
-    padding: 1% 2%;
+    /* padding: 1% 2%; */
     border-radius: 15px;
     align-items: center;
     font-family: 'iran-sans';
@@ -47,15 +48,16 @@ nav {
     position: relative;
     display: inline-flex;
     justify-content: center;
-
 }
 
 .btn_account img {
     width: 20px;
     padding: 0 0 0 10px;
 }
-   
+
+
 /* Ham menu Styles */
+
 .HanMenu {
     display: none;
 }
@@ -136,13 +138,12 @@ nav {
     position: relative;
     transition: all 0.5s ease-in;
 }
-   
+
 .btn_account_ham:hover {
     transition: all 150ms ease-in;
 }
 
 @media (max-width: 950px) {
-
     .HanMenu {
         width: 7%;
         display: flex;
@@ -151,51 +152,40 @@ nav {
         transition: all 200ms ease-in-out;
         scale: 0.9;
     }
-
     .HanMenu:hover {
         scale: 1;
         transition: all 200ms ease-in-out;
     }
-
     .ham_btn {
         width: 100%;
         height: 3px;
         margin-bottom: 10px;
         background-color: var(--logo_red);
     }
-
     .btn_nav {
         display: none;
     }
-
     .btn_account {
         display: none;
     }
-
 }
 
 @media (max-width: 750px) {
-
     nav {
         margin-top: 2%;
     }
-
     .HanMenu {
         width: 10%;
     }
-
     .ham_options {
         width: 60%;
     }
-
     .ham_options_div img {
         width: 48px;
     }
-
 }
 
 @media (max-width: 450px) {
-
     nav {
         width: 100%;
         border-bottom: 1px solid var(--text_black);
@@ -203,17 +193,13 @@ nav {
         align-items: center;
         justify-content: space-between;
     }
-
     .HanMenu {
         width: 13%;
     }
-
     .ham_options {
         width: 70%;
     }
-
     .ham_options_div img {
         width: 42px;
     }
-    
 }

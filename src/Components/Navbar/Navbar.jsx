@@ -47,7 +47,7 @@ const Navbar = () => {
                 <div></div>
                 <div></div>
                 <div></div>
-                <button className={styles.btn_account}><img src={char} alt="cup icon" />ورود | ثبت نام</button>
+                <Link to="/customer"><button className={styles.btn_account}><img src={char} alt="cup icon" />ورود | ثبت نام</button></Link>
                 <div className={styles.HanMenu} onClick={hamHandler}>
                     <div className={styles.ham_btn}></div>
                     <div className={styles.ham_btn}></div>

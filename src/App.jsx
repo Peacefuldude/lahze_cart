@@ -4,12 +4,17 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import FullPage from "./Components/FullPage/FullPage";
 
 // Components
+import Customer from "./Components/kharidar/Kharidar";
+import Seller from "./Components/foroshande/Compo";
+import Giftcardnum from "./Components/cartvarification/giftcardnum";
+import Shomarecart from "./Components/cartvarification/Shomarecart";
 import QandaPage from "./Components/OtherPages/QandaPage/QandaPage";
 import UserPage from "./Components/OtherPages/UserPage/UserPage";
 import ActivationPage from "./Components/OtherPages/UserPage/ActivationPage/ActivationPage";
 import CardPage from "./Components/OtherPages/UserPage/CardPage/CardPage";
 import AboutUs from "./Components/OtherPages/AboutUs/AboutUs";
-import Kharidar from "./Components/kharidar/Kharidar";
+import SellerOtpCode from "./Components/verificationcode/Codevorod"
+import CustomerOtpCode from "./Components/verificationcode/Costumercodevorod"
 
 function App() {
   return (
@@ -17,6 +22,12 @@ function App() {
       <Routes>
         {/* Pages */}
         <Route path="/home" element={ <  FullPage/>}/>
+        <Route path="/sellerotp" element={ <  SellerOtpCode/>}/>
+        <Route path="/customerotp" element={ <  CustomerOtpCode/>}/>
+        <Route path="/cardnumvar" element={ <  Shomarecart/>}/>
+        <Route path="/customer" element={ <  Customer/>}/>
+        <Route path="/seller" element={ <  Seller/>}/>
+        <Route path="/opengiftcardnumvar" element={ <  Giftcardnum/>}/>
         <Route path="/QandAPage" element={ <  QandaPage/>}/>
         <Route path="/UserPage" element={ <  UserPage/>}/>
         <Route path="/ActivationPage" element={ <  ActivationPage/>}/>
