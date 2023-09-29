@@ -13,7 +13,7 @@ import home from '../../../Images/home.png'
 import edit from '../../../Images/edit.png'
 import exit from '../../../Images/exit.png'
 import attention from '../../../Images/attantion.png'
-
+import close from '../../../Images/close.png'
 
 // Componentes
 import Activation from "./Activation/Activation";
@@ -78,13 +78,34 @@ const UserPage = () => {
         Navigate("/home");
     }
 
+    // navbar funcs and states
+    const [navbarAvtive, setNavbarActive] = useState(false)
+    const navbarHandler = () => {
+        setNavbarActive(!navbarAvtive)
+    }
+
     return ( 
         <div className={styles.UserPage_Container}>
             <section className={styles.right_sec}>
-                <img src={userprof} alt="user profile" className={styles.user_prof_img}/>
-                <h3>کافه انسان</h3>
-                <p>جانبازان،بلوار مطهری، برج های مسکونی راژیا</p>
+                <section className={styles.user_profile_info}>
+                    <img src={userprof} alt="user profile" className={styles.user_prof_img}/>
+                    <h3>کافه انسان</h3>
+                </section>
+                <section className={styles.user_profile_info_phone}>
+                    <section>
+                        <img src={userprof} alt="user profile" className={styles.user_prof_img}/>
+                        <h3>کافه انسان</h3>
+                    </section>
+                    <div onClick={navbarHandler}>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </section>
                 <section className={styles.user_info_sec}>
+                    <section>
+                        <p>جانبازان،بلوار مطهری، برج های مسکونی راژیا</p>
+                    </section>
                     <section>
                         <img src={phone} alt="telephone" />
                         <p>0284368482</p>
@@ -133,6 +154,23 @@ const UserPage = () => {
                         <button className={styles.logout_activate} onClick={logoutActivate}>بلی</button>
                         <button className={styles.logout_cancel} onClick={logoutCancel}>خیر</button>
                     </div>
+                </section>
+            </div>
+            <div className={navbarAvtive ? styles.navbarAvtive : styles.navbarDeactive}>
+                <img className={styles.nav_close_btn} src={close} alt="close button" onClick={navbarHandler} />
+                <section className={styles.user_btn_sec_fornav}>
+                    <section>
+                        <img src={edit} alt="edit" />
+                        <p>ویرایش اطلاعات</p>
+                    </section>
+                    <section>
+                        <img src={home} alt="home" />
+                        <p>خانه</p>
+                    </section>
+                    <section onClick={LogoutHandler}>
+                        <img src={exit} alt="exit" />
+                        <p>خروج از حساب کاربری</p>
+                    </section>
                 </section>
             </div>
         </div>

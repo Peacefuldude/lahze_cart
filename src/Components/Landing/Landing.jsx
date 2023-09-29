@@ -13,7 +13,7 @@ const Landing = () => {
         <div className={styles.Landing_Container}>
             <img src={Landingimg} alt="landing image" />
             <section className={styles.landing_text_sec}>
-                <h1>لحظه کارت، کارت های هدیه دیجیتالی و فیزیکی</h1>
+                <h1>لحظه کارت،<br/> لحظه سازی از جنس صدای شما</h1>
                 <img src={arrow} alt="arrow icon" className={styles.arrow_img}/>
                 <section className={styles.landing_btn_sec}>
                     <p>ما از لحظه هایی حرف میزنیم که نقاط عطف زندگی هایمان را می سازند.</p>

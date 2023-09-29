@@ -15,9 +15,11 @@ const Trophies = () => {
         <div className={styles.Trophies_Container}>
            <img src={trophies} alt="example card" className={styles.header_pic}/>
            <section className={styles.pid_sec}>
-               <img src={roshd} alt="roshd org logo" />
-               <img src={enamad} alt="enamad logo" />
-               <img src={samane} alt="sabt org logo" />
+                <a href="https://ictu.qiau.ac.ir/">
+                    <img src={roshd} alt="roshd org logo" />
+                </a>
+               {/* <img src={enamad} alt="enamad logo" /> */}
+               {/* <img src={samane} alt="sabt org logo" /> */}
            </section>
         </div>
      );

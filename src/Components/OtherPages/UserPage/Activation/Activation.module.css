@@ -19,6 +19,7 @@
     margin: 1% 0;
     display: flex;
     flex-direction: row;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -103,4 +104,54 @@
 
 .alert_sec img {
     margin-left: 15px;
+}
+
+@media (max-width: 420px) {
+
+    .Activation_Container form {
+        margin-top: 10%;
+    }
+
+    .activation_input_sec {
+        width: 100%;
+    }
+
+    .activation_input_sec p {
+        width: 20%;
+        margin-left: 5%;
+    }
+
+    .activation_input_sec input {
+        width: 60%;
+        height: 2.5rem;
+        border-radius: 5px;
+        border: 2px solid #261E354D;
+    }
+
+    .activation_btn_sec {
+        width: 100%;
+        margin: 5% 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .activation_btn_sec button {
+        width: 50%;
+        height: 3rem;
+        font-size: 16px;
+        color: var(--white);
+        background-color: #261E35;
+        align-items: center;
+        font-family: 'iran-sans';
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-flex;
+        border-radius: 10px;
+        justify-content: center;
+        padding: 3% 6%;
+        border: none;
+        text-align: center;
+        user-select: none;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
 }

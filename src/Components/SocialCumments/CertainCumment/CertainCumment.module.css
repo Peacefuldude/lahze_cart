@@ -23,7 +23,10 @@
 }
 
 .CerCum_Sec img {
+    border: 4px #6794dc solid;
+    border-radius: 50%;
     width: 100px;
+    height: 100px;
 }
 
 .CerCum_Sec h3 {
@@ -69,6 +72,13 @@
 
     .cumment_btn {
         margin-bottom: 0%;
+    }
+
+    .CerCum_Sec img {
+        border: 4px #6794dc solid;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
     }
 
 }

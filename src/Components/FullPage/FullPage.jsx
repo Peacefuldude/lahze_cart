@@ -38,9 +38,9 @@ const FullPage = () => {
                 <section className={styles.Qanda_section}>
                     <  Qanda  />
                 </section>
-                <section className={styles.Cumments_sections}>
+                {/* <section className={styles.Cumments_sections}>
                     <  Cumments  />
-                </section>
+                </section> */}
                 <section className={styles.SocialCumments_sections}>
                     <  SocialCumments  />
                 </section>

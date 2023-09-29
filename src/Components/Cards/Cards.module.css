@@ -50,6 +50,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.card_div1:hover {
+    transition: all 0.2 ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(166, 196, 19, 0.581) 0px 8px 16px -8px;
 }
 
 .card_div1 img {
@@ -67,6 +73,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.card_div2:hover {
+    transition: all 0.2 ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(10, 19, 186, 0.608) 0px 8px 16px -8px;
 }
 
 .card_div2 img {
@@ -84,6 +96,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.card_div3:hover {
+    transition: all 0.2 ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(18, 190, 50, 0.53) 0px 8px 16px -8px;
 }
 
 .card_div3 img {

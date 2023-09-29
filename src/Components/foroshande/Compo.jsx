@@ -5,6 +5,7 @@ import axios from "axios";
 // import { kharidarContext } from '../App';
 
 const Compo = () => {
+    console.log("sss");
     // const inf=useContext(kharidarContext);
     const[Data,SetData]=useState({
         phonenumber:""

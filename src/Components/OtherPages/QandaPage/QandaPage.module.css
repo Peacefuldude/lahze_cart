@@ -64,19 +64,24 @@
     /* height: 36px; */
 }
 
+.certainq_div div p {
+    text-align: right;
+}
+
 .span_active {
+    height: auto;
     font-size: 14px;
     font-weight: bold;
     color: #000000;
-    transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in;
 }
 
 .spandeActive {
-    display: none;
-    /* font-size: 11px;
+    height: 0;
+    font-size: 0;
     font-weight: bold;
     color: #8a8a8a;
-    transition: all 200ms ease-in-out; */
+    transition: all 200ms ease-in;
 }
 
 @media (max-width: 720px) {
@@ -110,6 +115,25 @@
     .AboutUs_info_sec {
         width: 90%;
         margin-top: 5%;
+    }
+
+    .questions_sec h1 {
+        font-size: 28px;
+        margin-top: 5%;
+    }
+
+    .certainq_div {
+        margin-top: 5%;
+    }
+
+    .certainq_div div img {
+        width: 24px;
+        /* height: 36px; */
+    }
+
+    .certainq_div div p {
+        font-size: 16px;
+        width: 80%;
     }
 
 }

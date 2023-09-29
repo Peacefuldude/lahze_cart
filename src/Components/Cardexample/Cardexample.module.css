@@ -6,6 +6,7 @@
 .cardnum1 {
     width: 100%;
     height: 100%;
+    cursor: pointer;
     user-drag: none;
     -webkit-user-drag: none;
     user-select: none;
@@ -18,6 +19,9 @@
     display: none;
 }
 
+.cardDeActive {
+    display: none;
+}
 
 @media (max-width: 720px) {
 

@@ -58,12 +58,20 @@ const Navbar = () => {
                     <div className={styles.ham_options_div}>
                         <img onClick={hamHandler} src={close} />
                         <div></div>
-                        <button className={styles.btn_nav_ham}>صفحه اصلی</button>
-                        <button className={styles.btn_nav_ham}>ما چه کاری می کنیم؟</button>
+                        { pathIsHome ? undefined :
+                        <Link to="/home">
+                            <button className={styles.btn_nav_ham}>خانه</button>
+                        </Link>
+                        }
+                        <button className={styles.btn_nav_ham}>همکاری با ما</button>
+                        <Link to="/QandAPage">
+                        <button className={styles.btn_nav_ham}>سوالات متداول</button>
+                        </Link>
+                        <Link to='/AboutUs'>
                         <button className={styles.btn_nav_ham}>درباره ما</button>
-                        <button className={styles.btn_nav_ham}>تماس با ما</button>
+                        </Link>
                         <div></div>
-                        <button className={styles.btn_account_ham}>صفحه شخصی</button>
+                        <Link to="/customer"><button className={styles.btn_account_ham}>ورود | ثبت نام</button></Link>
                         <div></div>
                     </div>
                 </div>

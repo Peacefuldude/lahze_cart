@@ -114,3 +114,54 @@
     outline: none;
     cursor: pointer;
 }
+
+@media (max-width: 420px) {
+
+    .remaining_sec h2 {
+        font-size: 20px;
+        margin-bottom: 2%;
+    }
+
+    .remaining_input_sec {
+        height: 10%;
+        margin: 3% 0;
+    }
+
+    .remaiming_main_sec {
+        padding: 5% 5% 5% 0;
+        flex-direction: row;
+    }
+
+    .remaiming_main_sec_div1 {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .remaiming_main_sec_div2 {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .remaning_sec_forwithdrawal {
+        margin-top: 5%;
+    }
+
+    .remaning_sec_forwithdrawal p {
+        display: none;
+    }
+
+    .remaning_sec_forwithdrawal input {
+        width: 50%;
+    }
+    .remaning_sec_forwithdrawal input:placeholder-shown {
+        font-size: 14px;
+    }
+
+    .remaning_sec_forwithdrawal button {
+        width: 30%;
+    }
+}

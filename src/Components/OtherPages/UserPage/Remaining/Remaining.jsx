@@ -148,6 +148,7 @@ const Remaining = () => {
                         name='amount'
                         value={data.amount}
                         onChange={amountChangeHandler}
+                        placeholder="مقدار برداشتی را وارد کنید"
                         />
                     <button onClick={withdrawlHandler}>کسر</button>
                 </section>
