@@ -28,26 +28,27 @@ const Navbar = () => {
     return ( 
         <div className={styles.Navbar_container}>
             <nav>
-                <div></div>
-                <img src={logo} alt="logo" />
-                <div></div>
-                <div></div>
-                { pathIsHome ? undefined :
+                <section className={styles.navbared}> {/* <div></div> */}
+                <section className={styles.logo} ><img src={logo} alt="logo" /></section>
+                {/* <div></div>
+                <div></div> */}
+                <section className={styles.btnvip}>{ pathIsHome ? "" :
                     <Link to="/home">
                         <button className={styles.btn_nav}>خانه</button>
                     </Link>
                 }
-                <button className={styles.btn_nav}>همکاری با ما</button>
+                <Link to="/Coop"><button className={styles.btn_nav}>همکاری با ما</button></Link>
                 <Link to="/QandAPage">
                     <button className={styles.btn_nav}>سوالات متداول</button>
                 </Link>
                 <Link to='/AboutUs'>
                     <button className={styles.btn_nav}>درباره ما</button>
                 </Link>
-                <div></div>
-                <div></div>
-                <div></div>
-                <Link to="/customer"><button className={styles.btn_account}><img src={char} alt="cup icon" />ورود | ثبت نام</button></Link>
+                <Link to="/customer">
+                    <button  className={styles.btn_account}><img src={char} alt="cup icon" />ورود | ثبت نام</button>
+                </Link>
+                </section>
+                </section>
                 <div className={styles.HanMenu} onClick={hamHandler}>
                     <div className={styles.ham_btn}></div>
                     <div className={styles.ham_btn}></div>
@@ -58,20 +59,19 @@ const Navbar = () => {
                     <div className={styles.ham_options_div}>
                         <img onClick={hamHandler} src={close} />
                         <div></div>
-                        { pathIsHome ? undefined :
                         <Link to="/home">
-                            <button className={styles.btn_nav_ham}>خانه</button>
+                            <button className={styles.btn_nav_ham}>صفحه اصلی</button>
                         </Link>
-                        }
-                        <button className={styles.btn_nav_ham}>همکاری با ما</button>
-                        <Link to="/QandAPage">
-                        <button className={styles.btn_nav_ham}>سوالات متداول</button>
+                        <Link to="/AboutUs">
+                            <button className={styles.btn_nav_ham}>درباره ما</button>
                         </Link>
-                        <Link to='/AboutUs'>
-                        <button className={styles.btn_nav_ham}>درباره ما</button>
+                        <Link to="/Coop">
+                            <button className={styles.btn_nav_ham}>همکاری با ما</button>
                         </Link>
                         <div></div>
-                        <Link to="/customer"><button className={styles.btn_account_ham}>ورود | ثبت نام</button></Link>
+                        <Link to="/customer">
+                            <button  className={styles.btn_nav_ham}><img className={styles.btn_nav_ham_img} src={char} alt="cup icon" />ورود | ثبت نام</button>
+                        </Link>
                         <div></div>
                     </div>
                 </div>

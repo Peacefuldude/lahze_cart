@@ -15,6 +15,7 @@ import CardPage from "./Components/OtherPages/UserPage/CardPage/CardPage";
 import AboutUs from "./Components/OtherPages/AboutUs/AboutUs";
 import SellerOtpCode from "./Components/verificationcode/Codevorod"
 import CustomerOtpCode from "./Components/verificationcode/Costumercodevorod"
+import Hamkari from "./Components/HamkariBaMa/Hamkari";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         {/* Pages */}
         <Route path="/home" element={ <  FullPage/>}/>
+        <Route path="/coop" element={ <  Hamkari/>}/>
         <Route path="/sellerotp" element={ <  SellerOtpCode/>}/>
         <Route path="/customerotp" element={ <  CustomerOtpCode/>}/>
         <Route path="/cardnumvar" element={ <  Shomarecart/>}/>
