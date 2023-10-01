@@ -27,7 +27,7 @@ nav {
 .btn_nav {
     font-size: 16px;
     text-shadow: -5px 5px 10px var(--background_black_darker);
-    color: var(--text_black);
+    color: #261e35;
     /* align-items: center; */
     font-family: 'iran-sans';
     box-sizing: border-box;

@@ -13,7 +13,9 @@
     align-items: flex-end;
 }
 
-.foot_logo_sec {
+.foot_logo_sec img {
+    width: 100px;
+    height: 110px;
 }
 
 .foot_contact_sec {

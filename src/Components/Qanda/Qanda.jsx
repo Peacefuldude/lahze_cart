@@ -106,35 +106,36 @@ const Qanda = () => {
                   <p>چگونه می‌توانم لحظه کارت را تهیه کنم؟</p>
                   <img src={q1state ? openmark : closemark} alt="question mark closed icon" />
                </div>
-               <span className={q1state ? styles.span_active : styles.spandeActive}>شما می توانید با مراجعه به مراکز و فروشگاه های تحت قرارداد با ما ، لحظه کارت خود را تهیه نمایید . همچنین می‌توانید با مراجعه به سایت ما به آدرس .......... از مراکز و فروشگاه های تحت قرار داد با ما آگاهی حاصل فرمایید</span>
+               <span className={q1state ? styles.span_active : styles.spandeActive}>شما می توانید با مراجعه به مراکز و فروشگاه های تحت قرارداد با ما ، لحظه کارت خود را تهیه نمایید . همچنین می‌توانید با مراجعه به سایت ما به آدرس .......... از مراکز و فروشگاه های تحت قرار داد با ما آگاهی حاصل فرمایید.</span>
             </div>
             <div className={styles.certainq_div}>
                <div onClick={q2Handler}>
                   <p>چگونه می توانم برای لحظه کارت خود پیام صوتی یا متنی ثبت کنم؟</p>
                   <img src={q2state ? openmark : closemark} alt="question mark closed icon" />
                </div>
-               <span className={q2state ? styles.span_active : styles.spandeActive}>شما می توانید با مراجعه به مراکز و فروشگاه های تحت قرارداد با ما ، لحظه کارت خود را تهیه نمایید . همچنین می‌توانید با مراجعه به سایت ما به آدرس .......... از مراکز و فروشگاه های تحت قرار داد با ما آگاهی حاصل فرمایید</span>
+               <span className={q2state ? styles.span_active : styles.spandeActive}>شما می توانید پس از فعال سازی لحظه کارت خود توسط صندوقدار مرکز یا فروشگاه مربوطه ، qr code پشت کارت خود را اسکن کرده و با وارد کردن شماره تلفن خود برای لحظه کارت خود پیام صوتی یا متنی دلخواه خود را ثبت فرمایید.</span>
             </div>
             <div className={styles.certainq_div}>
                <div onClick={q3Handler}>
                   <p>آیا میتوان از لحظه کارت خریداری شده برای مراکز های دیگر استفاده کرد؟</p>
                   <img src={q3state ? openmark : closemark} alt="question mark closed icon" />
                </div>
-               <span className={q3state ? styles.span_active : styles.spandeActive}>شما می توانید با مراجعه به مراکز و فروشگاه های تحت قرارداد با ما ، لحظه کارت خود را تهیه نمایید . همچنین می‌توانید با مراجعه به سایت ما به آدرس .......... از مراکز و فروشگاه های تحت قرار داد با ما آگاهی حاصل فرمایید</span>
+               <span className={q3state ? styles.span_active : styles.spandeActive}>خیر ، لحظه کارت فقط قابل استفاده در مرکزی می باشد که کارت از آنجا تهیه شده است می باشد.</span>
             </div>
             <div className={styles.certainq_div}>
                <div onClick={q4Handler}>
                   <p>چگونه می توانم از لحظه کارت استفاده کنم؟</p>
                   <img src={q4state ? openmark : closemark} alt="question mark closed icon" />
                </div>
-               <span className={q4state ? styles.span_active : styles.spandeActive}>شما می توانید با مراجعه به مراکز و فروشگاه های تحت قرارداد با ما ، لحظه کارت خود را تهیه نمایید . همچنین می‌توانید با مراجعه به سایت ما به آدرس .......... از مراکز و فروشگاه های تحت قرار داد با ما آگاهی حاصل فرمایید</span>
+               <span className={q4state ? styles.span_active : styles.spandeActive}>بعد از تحویل هدیه خود ، شما می‌توانید با اسکن qr code پشت کارت خود و وارد کردن رمز کارت که در زیر qr code ثبت شده است ، پیام صوتی یا متنی دوست خود را ببینید . همچنین از مبلغ کارت و باقی مانده اعتبار آن و تاریخ انقضا کارت مطلع شوید . همچنین آدرس مرکز یا فروشگاهی که می‌توانید از امکانات آن استفاده فرمایید در همان صفحه به شما نمایش داده می‌شود. با مراجعه به مکان نمایش داده شده و تحویل کارت به صندوقدار می توانید از لحطه کارت خود استفاده کنید . 
+لحظه کارت ، همراه لحظه های خوش شما</span>
             </div>
             <div className={styles.certainq_div}>
                <div onClick={q5Handler}>
                   <p>آیا لحظه کارت تاریخ انقضاء دارد؟</p>
                   <img src={q5state ? openmark : closemark} alt="question mark closed icon" />
                </div>
-               <span className={q5state ? styles.span_active : styles.spandeActive}>شما می توانید با مراجعه به مراکز و فروشگاه های تحت قرارداد با ما ، لحظه کارت خود را تهیه نمایید . همچنین می‌توانید با مراجعه به سایت ما به آدرس .......... از مراکز و فروشگاه های تحت قرار داد با ما آگاهی حاصل فرمایید</span>
+               <span className={q5state ? styles.span_active : styles.spandeActive}>بله ، پس از فال سازی لحظه کارت شما توسط صندوقدار ، کارت شما به مدت ...... اعتبار دارد . همچنین شما می توانید با اسکن qr code پشت کارت و وارد کردن رمز آن ، از زمان اتمام اعتبار کارت خود مطلع شوید .</span>
             </div>
             <div className={styles.moreQ_div}>
                <Link to="/QandAPage">
