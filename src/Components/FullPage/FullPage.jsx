@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Helmet } from 'react-helmet';
 // Stylse
 import styles from './FullPage.module.css'
 
@@ -19,6 +19,11 @@ const FullPage = () => {
 
     return ( 
         <div className={styles.fullpage_container}>
+        <Helmet>
+        <title>لحظه کارت</title>
+        <meta name="لحظه کارت کارت هدیه ان اف تی" content="PAGE FOR DETAIL AND SHOP GIFT CARDS" />
+        <meta name="لحظه کارت" content="لحظه کارت, لحظهکارت, گیفت,کارت هدیه,gift card,lahze,card,lahze card" />
+      
             <main>
                 <section className={styles.Navbar_section}>
                     <  Navbar  />
@@ -51,6 +56,7 @@ const FullPage = () => {
                     <  Footer  />
                 </section>
             </main>
+        </Helmet>
         </div>
      );
 }
