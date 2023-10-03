@@ -27,52 +27,104 @@ const Shomarecart = () => {
         const ref16 = useRef(null);
 
         const Keyup=(event)=>{
-            
-            if(event.target.id=="ref2")
-            {ref2.current.focus();}
-            else
-            if(event.target.id=="ref3")
-            {ref3.current.focus();}
-            else
-            if(event.target.id=="ref4")
-            {ref4.current.focus();}
-            else
-            if(event.target.id=="ref5")
-            {ref5.current.focus();}
-            else
-            if(event.target.id=="ref6")
-            {ref6.current.focus();}
-            else
-            if(event.target.id=="ref7")
-            {ref7.current.focus();}
-            else
-            if(event.target.id=="ref8")
-            {ref8.current.focus();}
-            else
-            if(event.target.id=="ref9")
-            {ref9.current.focus();}
-            else
-            if(event.target.id=="ref10")
-            {ref10.current.focus();}
-            else
-            if(event.target.id=="ref11")
-            {ref11.current.focus();}
-            else
-            if(event.target.id=="ref12")
-            {ref12.current.focus();}
-            else
-            if(event.target.id=="ref13")
-            {ref13.current.focus();}
-            else
-            if(event.target.id=="ref14")
-            {ref14.current.focus();}
-            else
-            if(event.target.id=="ref15")
-            {ref15.current.focus();}
-            else
-            if(event.target.id=="ref16")
-            {ref16.current.focus();}
-            
+            console.log(event.code);
+            if(event.code==="ArrowRight"){
+
+                if(event.target.id=="ref2")
+                {ref2.current.focus();}
+                else
+                if(event.target.id=="ref3")
+                {ref3.current.focus();}
+                else
+                if(event.target.id=="ref4")
+                {ref4.current.focus();}
+                else
+                if(event.target.id=="ref5")
+                {ref5.current.focus();}
+                else
+                if(event.target.id=="ref6")
+                {ref6.current.focus();}
+                else
+                if(event.target.id=="ref7")
+                {ref7.current.focus();}
+                else
+                if(event.target.id=="ref8")
+                {ref8.current.focus();}
+                else
+                if(event.target.id=="ref9")
+                {ref9.current.focus();}
+                else
+                if(event.target.id=="ref10")
+                {ref10.current.focus();}
+                else
+                if(event.target.id=="ref11")
+                {ref11.current.focus();}
+                else
+                if(event.target.id=="ref12")
+                {ref12.current.focus();}
+                else
+                if(event.target.id=="ref13")
+                {ref13.current.focus();}
+                else
+                if(event.target.id=="ref14")
+                {ref14.current.focus();}
+                else
+                if(event.target.id=="ref15")
+                {ref15.current.focus();}
+                else
+                if(event.target.id=="ref16")
+                {ref16.current.focus();}
+                
+            }else if(event.code==="ArrowLeft"){
+                
+                // if(event.target.id=="ref2")
+                // {ref.current.focus();}
+                // else
+                if(event.target.id=="ref3")
+                {ref.current.focus();}
+                else
+                if(event.target.id=="ref4")
+                {ref2.current.focus();}
+                else
+                if(event.target.id=="ref5")
+                {ref3.current.focus();}
+                else
+                if(event.target.id=="ref6")
+                {ref4.current.focus();}
+                else
+                if(event.target.id=="ref7")
+                {ref5.current.focus();}
+                else
+                if(event.target.id=="ref8")
+                {ref6.current.focus();}
+                else
+                if(event.target.id=="ref9")
+                {ref7.current.focus();}
+                else
+                if(event.target.id=="ref10")
+                {ref8.current.focus();}
+                else
+                if(event.target.id=="ref11")
+                {ref9.current.focus();}
+                else
+                if(event.target.id=="ref12")
+                {ref10.current.focus();}
+                else
+                if(event.target.id=="ref13")
+                {ref11.current.focus();}
+                else
+                if(event.target.id=="ref14")
+                {ref12.current.focus();}
+                else
+                if(event.target.id=="ref15")
+                {ref13.current.focus();}
+                else
+                if(event.target.id=="ref16")
+                {ref14.current.focus();}
+
+                if(event.target.id=="ref17")
+                {ref15.current.focus();}
+            }
         }
 
 
@@ -163,7 +215,7 @@ const Shomarecart = () => {
                                     <input className={styles.inputs} onChange={Changehandler} onFocus={Focused} onKeyUp={Keyup} ref={ref13} id='ref14' name="cardNum" type='text' maxLength="1" />
                                     <input className={styles.inputs} onChange={Changehandler} onFocus={Focused} onKeyUp={Keyup} ref={ref14} id='ref15' name="cardNum" type='text' maxLength="1" />
                                     <input className={styles.inputs} onChange={Changehandler} onFocus={Focused} onKeyUp={Keyup} ref={ref15} id='ref16' name="cardNum" type='text' maxLength="1" />
-                                    <input className={styles.inputs} onChange={Changehandler} onFocus={Focused} onKeyUp={Keyup} ref={ref16}            name="cardNum" type='text' maxLength="1" />
+                                    <input className={styles.inputs} onChange={Changehandler} onFocus={Focused} onKeyUp={Keyup} ref={ref16} id='ref17' name="cardNum" type='text' maxLength="1" />
                     
                     
                     </div>

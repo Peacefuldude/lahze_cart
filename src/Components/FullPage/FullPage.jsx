@@ -23,7 +23,8 @@ const FullPage = () => {
         <title>لحظه کارت</title>
         <meta name="لحظه کارت کارت هدیه ان اف تی" content="PAGE FOR DETAIL AND SHOP GIFT CARDS" />
         <meta name="لحظه کارت" content="لحظه کارت, لحظهکارت, گیفت,کارت هدیه,gift card,lahze,card,lahze card" />
-      
+              
+       </Helmet>
             <main>
                 <section className={styles.Navbar_section}>
                     <  Navbar  />
@@ -56,7 +57,7 @@ const FullPage = () => {
                     <  Footer  />
                 </section>
             </main>
-        </Helmet>
+
         </div>
      );
 }
