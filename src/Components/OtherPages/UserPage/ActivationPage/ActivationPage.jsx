@@ -86,7 +86,7 @@ const ActivationPage = () => {
                     <section className={styles.activation_info_div_sec_info}>
                         <h2>کافه حیات انسان</h2>
                         <div className={styles.activation_info_div_sec_info_div}>
-                            <div>
+                            <div className={styles.removeinphone}>
                                 <img src={website} alt="user info" />
                                 <p>https://pizzapelleh.ir</p>
                             </div>
@@ -106,7 +106,7 @@ const ActivationPage = () => {
                     <section className={styles.activation_input_sec}>
                         <input
                             className={styles.activation_input}
-                            placeholder="نوشتن متن دلخواه..."
+                            placeholder="متن پیام دلخواه"
                             type='text'
                             name='text'
                             value={data.text}

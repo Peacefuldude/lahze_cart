@@ -71,6 +71,7 @@
     font-size: 18px;
 }
 
+
 .activation_info_div_sec_info_div {
     width: 100%;
     display: flex;
@@ -115,7 +116,7 @@
 }
 
 .activation_input_sec {
-    width: 80%;
+    width: 70%;
     height: 50%;
 }
 
@@ -124,17 +125,19 @@
     height: 10rem;
     border-radius: 0 15px 15px 15px;
     font-size: 16px;
-    padding: 5px 5px;
+    padding: 15px;
     margin-bottom: 5%;
     font-family: 'iran-sans';
     border: none;
     outline: none;
+    text-align: right;
     background-color: #F2EDF4;
 }
 
 .voice_input_sec {
     width: 80%;
     height: 50%;
+    margin: 3% 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -167,7 +170,7 @@
 
 .btn_sec div {
     width: 100%;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -178,7 +181,6 @@
     width: 24px;
     height: 24px;
     margin-left: 7px;
-    margin-top: 15px;
 }
 
 .btn_sec div p {
@@ -206,4 +208,131 @@
     text-align: center;
     user-select: none;
     box-shadow: 0px 4px 25px 0px rgba(95, 64, 100, 0.6);
+}
+
+@media (max-width: 720px) {
+    .right_sec {
+        display: none;
+    }
+
+    .left_sec {
+        width: 80%;
+        /* height: 100%; */
+        border-radius: 30px;
+        padding: 2% 4%;
+        margin-bottom: 2%;
+        background-color: var(--white);
+    }
+
+    .activation_info_div {
+        width: 100%;
+        margin-bottom: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .activation_info_div_sec_info {
+        width: 80%;
+        height: 100%;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .activation_info_div_sec_img {
+        width: 20%;
+        height: 100%;
+    }
+
+    .activation_input_sec {
+        width: 90%;
+        height: 50%;
+    }
+
+    .activation_input_sec input {
+        height: 10rem;
+        border-radius: 0 15px 15px 15px;
+        font-size: 16px;
+        padding: 3px;
+        margin-bottom: 5%;
+        font-family: 'iran-sans';
+        border: none;
+        outline: none;
+        text-align: right;
+        background-color: #F2EDF4;
+    }
+
+    .voice_input_sec {
+        width: 80%;
+        height: 50%;
+        margin: 2% 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn_sec div p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .ActivationPage_Container {
+        height: 100vh;
+    }
+
+    .left_sec {
+        padding: 4% 4%;
+    }
+
+    .activation_info_div_sec_img {
+        width: 40%;
+        height: 100%;
+    }
+
+    .activation_info_div_sec_info {
+        width: 40%;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .activation_info_div_sec_info_div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .user_map_address {
+        width: 90%;
+        height: 10rem;
+    }
+
+    .btn_sec {
+        width: 90%;
+    }
+
+    .btn_sec div img {
+        width: 16px;
+        height: 16px;
+        margin-left: 7px;
+    }
+
+    .btn_sec div p {
+        font-size: 9px;
+    }
+
+    .submit_btn {
+        width: 50%;
+    }
+
 }

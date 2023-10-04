@@ -18,6 +18,12 @@ import cardexample from '../../../../Images/cardexampleforuser.png'
 
 const CardPage = () => {
 
+    const Navigate = useNavigate();
+    // temprory
+    useEffect(() => {
+        Navigate("/home");
+    },[])
+
     // Voice recording Funcs and states
     const [voiceFile, setVoiceFile] = useState(false);
     const addAudioElement = (blob) => {
