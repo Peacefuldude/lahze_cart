@@ -51,6 +51,7 @@
     justify-content: space-between;
     align-items: center;
     transition: all 0.2s ease-in-out;
+    text-align: center;
 }
 
 .card_div1:hover {
@@ -74,6 +75,7 @@
     justify-content: space-between;
     align-items: center;
     transition: all 0.2s ease-in-out;
+    text-align: center;
 }
 
 .card_div2:hover {
@@ -106,6 +108,10 @@
 
 .card_div3 img {
     width: 188px;
+}
+
+.card_text p {
+    text-align: center;
 }
 
 @media (max-width: 720px) {
