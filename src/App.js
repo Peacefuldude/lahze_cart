@@ -9,7 +9,9 @@ import Seller from "./Components/foroshande/Compo";
 import Giftcardnum from "./Components/cartvarification/giftcardnum";
 import Shomarecart from "./Components/cartvarification/Shomarecart";
 import QandaPage from "./Components/OtherPages/QandaPage/QandaPage";
-import UserPage from "./Components/OtherPages/UserPage/UserPage";
+import SellerPanel from "./Components/OtherPages/UserPage/SellerPanel/SellerPanel";
+import HistoryPanel from "./Components/OtherPages/UserPage/SellerPanel/HistoryPanel";
+import AmountPanel from "./Components/OtherPages/UserPage/SellerPanel/AmountPanel";
 import ActivationPage from "./Components/OtherPages/UserPage/ActivationPage/ActivationPage";
 import CardPage from "./Components/OtherPages/UserPage/CardPage/CardPage";
 import AboutUs from "./Components/OtherPages/AboutUs/AboutUs";
@@ -31,7 +33,9 @@ function App() {
         <Route path="/seller" element={ <  Seller/>}/>
         <Route path="/opengiftcardnumvar" element={ <  Giftcardnum/>}/>
         <Route path="/QandAPage" element={ <  QandaPage/>}/>
-        <Route path="/UserPage" element={ <  UserPage/>}/>
+        <Route path="/UserPage" element={ <  SellerPanel/>}/>
+        <Route path="/HistoryPanel" element={ <  HistoryPanel/>}/>
+        <Route path="/AmountPanel" element={ <  AmountPanel/>}/>
         <Route path="/ActivationPage" element={ <  ActivationPage/>}/>
         <Route path="/CardPage" element={ <  CardPage/>}/>
         <Route path="/AboutUs" element={ <  AboutUs/>}/>
