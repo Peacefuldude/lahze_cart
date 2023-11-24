@@ -20,9 +20,9 @@ const CardPage = () => {
 
     const Navigate = useNavigate();
     // temprory
-    useEffect(() => {
-        Navigate("/home");
-    },[])
+    // useEffect(() => {
+    //     Navigate("/home");
+    // },[])
 
     // Voice recording Funcs and states
     const [voiceFile, setVoiceFile] = useState(false);
@@ -149,15 +149,6 @@ const CardPage = () => {
                             />
                         }
                         {/* THe Audio file will be created here: */}
-                    </section>
-                    <section className={styles.btn_sec}>
-                        <div>
-                            <img src={attetiongrey} alt="attention sign" />
-                            <p>در صورت نقض قوانین جمهوری اسلامی صدای شما حذف می شود.</p>
-                        </div>
-                        <button className={styles.submit_btn}>
-                            ثبت پیام
-                        </button>
                     </section>
                 </div>
             </section>

@@ -32,6 +32,10 @@
 
 .questions_sec h1 {
     font-size: 32px;
+    width: 85%;
+    padding: 5% 0 3% 0;
+    float: right;
+    text-align: right;
 }
 
 .certainq_div {
@@ -60,7 +64,7 @@
 }
 
 .certainq_div div img {
-    width: 36px;
+    width: 24px;
     /* height: 36px; */
 }
 
@@ -68,10 +72,15 @@
     text-align: right;
 }
 
+.certainq_div span {
+    float: right;
+    text-align: right;
+}
+
 .span_active {
     height: auto;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: medium;
     color: #000000;
     transition: all 200ms ease-in;
 }

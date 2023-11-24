@@ -67,6 +67,7 @@
     
     .Cards_Container {
         height: 70vh;
+        padding-top: 30%;
         background-color: var(--white);
     }
 

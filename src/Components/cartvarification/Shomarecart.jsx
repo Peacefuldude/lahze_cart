@@ -27,7 +27,7 @@ const Shomarecart = () => {
         const ref16 = useRef(null);
 
         const Keyup=(event)=>{
-            console.log(event.code);
+            // console.log(event.code);
             if(event.code==="ArrowRight"){
 
                 if(event.target.id=="ref2")

@@ -106,7 +106,7 @@ const Qanda = () => {
                   <p>چگونه می‌توانم لحظه کارت را تهیه کنم؟</p>
                   <img src={q1state ? openmark : closemark} alt="question mark closed icon" />
                </div>
-               <span className={q1state ? styles.span_active : styles.spandeActive}>شما می توانید با مراجعه به مراکز و فروشگاه های تحت قرارداد با ما ، لحظه کارت خود را تهیه نمایید . همچنین می‌توانید با مراجعه به سایت ما به آدرس .......... از مراکز و فروشگاه های تحت قرار داد با ما آگاهی حاصل فرمایید.</span>
+               <span className={q1state ? styles.span_active : styles.spandeActive}>شما می توانید با مراجعه به مراکز و فروشگاه های تحت قرارداد با ما ، لحظه کارت خود را تهیه نمایید . همچنین می‌توانید با مراجعه به سایت ما به آدرس www.lahzecard.com از مراکز و فروشگاه های تحت قرار داد با ما آگاهی حاصل فرمایید.</span>
             </div>
             <div className={styles.certainq_div}>
                <div onClick={q2Handler}>

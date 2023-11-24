@@ -23,16 +23,19 @@ const ActivationPage = () => {
 
     // Voice recording Funcs and states
     const [voiceFile, setVoiceFile] = useState(false);
+    const [voiceMessage, setVoiceMessage] = useState();
     const addAudioElement = (blob) => {
         const url = URL.createObjectURL(blob);
         const audio = document.createElement("audio");
         audio.src = url;
         audio.controls = true;
+        setVoiceMessage(audio.src)
+        // console.log(audio.src);
         if (voiceFile) return
         document.getElementById("voiceRec").appendChild(audio);
         setVoiceFile(true);
     };
-    
+
     const removeChildHandler = () => {
         setVoiceFile(false)
         const parent =  document.getElementById("voiceRec");
@@ -51,27 +54,29 @@ const ActivationPage = () => {
         });
     }
 
-    // const userToken = JSON.parse(localStorage.getItem('user'));
+    const axiosConficPost = {
+        headers: {
+            "Dev": "vip4c@reDevelop3r",
+            "Content-Type": "multipart/form-data"
 
-    // const axiosConficPost = {
-    //     headers: {
-    //         "Dev": "vip4c@reDevelop3r",
-    //         "Authorization": "Bearer " + userToken.token,
-    //     },
-    // };
+        },
+    };
 
-    // const [userProfile, setUserProfile] = useState([]);
+    const [userMessage, setUserMessage] = useState([]);
 
-    // useEffect(() => {
-    //     const getServices = async () => {
-    //         axios.get("https://api.vip4care.ir/user/profile", axiosConficPost)
-    //             .then((response)=> setUserProfile(response.data.user))
-    //             // .catch((error)=> console.log(error))
-    //     };
+    const submitHandler = (event) => {
+        event.preventDefault();
+        let formedata = new FormData();
+        formedata.append('text', data.text)
+        formedata.append('voice', voiceMessage)
+        const CARD_DATA = formedata;
+        console.log(formedata);
+        axios.post("https://api.lahzecard.com/api/user/uploadData", CARD_DATA, axiosConficPost)
+            // .then((response)=> setUserMessage(response.data.user))
+            .then((response)=> console.log(response))
+            .catch((error)=> console.log(error))
+    }
 
-    //     getServices();
-
-    // }, []);
 
     return ( 
         <div className={styles.ActivationPage_Container}>
@@ -137,7 +142,7 @@ const ActivationPage = () => {
                             <img src={attetiongrey} alt="attention sign" />
                             <p>در صورت نقض قوانین جمهوری اسلامی صدای شما حذف می شود.</p>
                         </div>
-                        <button className={styles.submit_btn}>
+                        <button className={styles.submit_btn} onClick={submitHandler}>
                             ثبت پیام
                         </button>
                     </section>

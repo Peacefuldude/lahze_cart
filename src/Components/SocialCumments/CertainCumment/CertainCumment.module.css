@@ -82,3 +82,11 @@
     }
 
 }
+
+@media (max-width: 480px) {
+
+    .CerCum_Sec {
+        padding-top: 10%;
+    }
+
+}
