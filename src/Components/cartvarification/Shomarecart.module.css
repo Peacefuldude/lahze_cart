@@ -351,7 +351,7 @@ input:focus {
     }
     .left {
         /* position: fixed; */
-        height: 50%;
+        /* height: 50%; */
         width: 100%;
         display: flex;
         /* padding: 0 2rem; */

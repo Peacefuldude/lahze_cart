@@ -1,12 +1,13 @@
 import React, { useContext, useState,useEffect,useRef } from 'react';
 import styles from "./Shomarecart.module.css";
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTriangleExclamation,faArrowLeftLong} from '@fortawesome/free-solid-svg-icons'
 import { Helmet } from "react-helmet";
 import axios from "axios";
-const Shomarecart = () => {
 
+const Giftcardnum = () => {
+         const Navigate = useNavigate();
 
         //for input focus
         const ref = useRef(null);    
@@ -196,18 +197,37 @@ const Shomarecart = () => {
         const Focused=event=>{
             SetTouched({...Touched,[event.target.name]:true})
         }
-    
+        const UserToken=JSON.parse(localStorage.getItem('Lahzeusertoken'));
+        const[header,setHeader]=useState({
+            headers:{
+                "Content-Type":"application/json",   
+               "Authorization": "Bearer "+UserToken
+            }
+          }) 
         const Submithandler = (event)=>{
             event.preventDefault();
-    
+            axios.get(`http://185.105.239.124/api/user/readCard${cardNumber}`,header)
+                            .then((response)=> {
+                                
+                                console.log(response)
+                                localStorage.setItem('Carddetail', JSON.stringify(response.data.cardInfo))
+                                // setBus(response.data.data.buses)
+                                setTimeout(()=>Navigate("/CardPage"), 100)
+                               
+                            })
+            
+                            .catch((errors)=> {
+                                console.log(errors)
+        
+                            })
+                    
             //نیاز به ریسپانس از بک اند هست که چک شود
             console.log(cardNumber)
             // console.log(Data)
-            // Navigate("/CardPage")
+            // Navigate("/ActivationPage")
     
         }
     return (
-
         <div className={styles.login_seller}>
         <Helmet>
             <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
@@ -254,7 +274,8 @@ const Shomarecart = () => {
 
     </div>
 
+  
     );
 };
 
-export default Shomarecart;
+export default Giftcardnum;

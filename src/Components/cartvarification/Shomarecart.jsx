@@ -197,10 +197,30 @@ const Shomarecart = () => {
     const Focused=event=>{
         SetTouched({...Touched,[event.target.name]:true})
     }
-
+    const UserToken=JSON.parse(localStorage.getItem('Lahzeusertoken'));
+    const[header,setHeader]=useState({
+        headers:{
+            "Content-Type":"application/json",   
+           "Authorization": "Bearer "+UserToken
+        }
+      }) 
     const Submithandler = (event)=>{
         event.preventDefault();
-
+        axios.get(`http://185.105.239.124/api/user/card${cardNumber}`,header)
+                        .then((response)=> {
+                            
+                            console.log(response)
+                            localStorage.setItem('Carddetail', JSON.stringify(response.data.cardInfo))
+                            // setBus(response.data.data.buses)
+                            setTimeout(()=>Navigate("/ActivationPage"), 100)
+                           
+                        })
+        
+                        .catch((errors)=> {
+                            console.log(errors)
+    
+                        })
+                
         //نیاز به ریسپانس از بک اند هست که چک شود
         console.log(cardNumber)
         // console.log(Data)

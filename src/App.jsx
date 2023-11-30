@@ -6,7 +6,7 @@ import FullPage from "./Components/FullPage/FullPage";
 // Components
 import Customer from "./Components/kharidar/Kharidar";
 import Seller from "./Components/foroshande/Compo";
-import Giftcardnum from "./Components/cartvarification/giftcardnum";
+import Giftcardnum from "./Components/cartvarification/Giftcardnum";
 import Shomarecart from "./Components/cartvarification/Shomarecart";
 import QandaPage from "./Components/OtherPages/QandaPage/QandaPage";
 import SellerPanel from "./Components/OtherPages/UserPage/SellerPanel/SellerPanel";
@@ -29,9 +29,9 @@ function App() {
         <Route path="/sellerotp" element={ <  SellerOtpCode/>}/>
         <Route path="/customerotp" element={ <  CustomerOtpCode/>}/>
         <Route path="/cardnumvar" element={ <  Shomarecart/>}/>
+        <Route path="/opengiftcardnumvar" element={ <  Giftcardnum/>}/>
         <Route path="/customer" element={ <  Customer/>}/>
         <Route path="/seller" element={ <  Seller/>}/>
-        <Route path="/opengiftcardnumvar" element={ <  Giftcardnum/>}/>
         <Route path="/QandAPage" element={ <  QandaPage/>}/>
         <Route path="/UserPage" element={ <  SellerPanel/>}/>
         <Route path="/HistoryPanel" element={ <  HistoryPanel/>}/>

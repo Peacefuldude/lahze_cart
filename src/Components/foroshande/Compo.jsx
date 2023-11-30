@@ -1,21 +1,24 @@
 import React, { useContext, useState,useEffect } from 'react';
 import styles from "./comp.module.css";
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import axios from "axios";
-// import { kharidarContext } from '../App';
+
+
+
 
 const Compo = () => {
-    console.log("sss");
-    // const inf=useContext(kharidarContext);
     const[Data,SetData]=useState({
-        phonenumber:""
-    })
-
-
+        phone:""
+        })
     
     const Changehandler = (event)=>{
-        SetData({...Data,[event.target.name]:event.target.value})
-    }
+            SetData({
+                ...Data,[event.target.name]:event.target.value
+    
+            })
+        }
+        const Navigate = useNavigate();
+
 
 
 
@@ -25,21 +28,22 @@ const Compo = () => {
     //valid
     const validate = Data=>{
         const error={};
-        console.log(isNaN(Data.phonenumber))
-        if(!Data.phonenumber.trim()){
-            error.phonenumber=" !شماره تلفن را وارد کنید"
+        if(!Data.phone.trim()){
+            error.phone=" !شماره تلفن را کامل کنید"
         }else
-        if(isNaN(Data.phonenumber))
+        if(isNaN(Data.phone))
         {
-         error.phonenumber=" !شماره تلفن را درست وارد کنید" 
+         error.phone=" !شماره تلفن را درست وارد کنید" 
         }
         else{
-            delete error.phonenumber;
+            delete error.phone;
         }
         return error;
     }
     //error
     const [error,SetError]=useState({})
+    const [err,SetErr]=useState()
+
 
     //check for error
     useEffect(()=>{
@@ -54,9 +58,32 @@ const Compo = () => {
     }
     const Submithandler = (event)=>{
         event.preventDefault();
-        console.log("hi");
-        axios.post("link",Data)
-        .then(Response=>console.log(Response))
+        // const phone=`${Data.phone}`;
+        console.log(Data)
+        axios.post("http://185.105.239.124/api/operator/login",Data)
+        .then((response)=> {
+            
+            if (response) {
+                console.log("post shod")
+                console.log(response)
+                
+                localStorage.setItem('phone', JSON.stringify(Data.phone))
+                
+                setTimeout(()=>Navigate("/sellerotp"), 1000)
+            }
+        })
+
+                // .catch((errors)=> {
+                //     console.log(errors)
+
+                // })
+
+        .catch((errors)=> {
+            console.log(errors);
+            SetErr(errors.response.data.message)
+            console.log(err);
+
+        })
     }
 
 
@@ -82,16 +109,17 @@ const Compo = () => {
                     <div className={styles.joziyat}>
                         <div className={styles.header}>ورود به عنوان فروشنده </div>
                         
-                        {/* <div className={styles.phonenumber}> */}
+                        {/* <div className={styles.phone}> */}
                             
                             {/* <div className={styles.Rectangle131}> */}
                                 
                                 {/* </div> */}
                                 <form className={styles.phonenumber} onSubmit={Submithandler}>
                                     <label className={styles.labelrect}>شماره همراه</label>
-                                <input className={styles.Rectangle131} onChange={Changehandler} value={Data.phonenumber} type="text" name="phonenumber" onFocus={Focused} />
-                                {error.phonenumber && Touched.phonenumber && <span className={styles.error}>{error.phonenumber}</span>}
-                                <button  className={styles.Rectangle132prim} type='submit'><Link className={styles.links}to="/sellerotp">ارسال کد</Link></button>
+                                <input className={styles.Rectangle131} onChange={Changehandler} value={Data.phone} type="text" name="phone" onFocus={Focused} />
+                                {error.phone && Touched.phone && <span className={styles.error}>{error.phone}</span>}
+                                {err && <span className={styles.error}>{err}</span>}                                
+                                <button  className={styles.Rectangle132prim} type='submit'><span className={styles.links}>ارسال کد</span></button>
                             </form> 
                         {/* </div> */}
                         
